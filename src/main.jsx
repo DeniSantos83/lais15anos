@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 import { CalendarDays, Clock3, Sparkles } from 'lucide-react'
 import './style.css'
 
 function App() {
+  const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('is-visible')
+        })
+      },
+      { threshold: 0.18 }
+    )
+
+    const elements = document.querySelectorAll('.reveal-on-scroll')
+    elements.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <main>
       <section className="hero">
@@ -13,7 +30,7 @@ function App() {
 
         <div className="hero__content reveal">
           <span className="eyebrow">SAVE THE DATE</span>
-          <img className="brand" src="/assets/logo.png" alt="Laís Gentil XV" />
+          <img className="brand" src={asset('logo.png')} alt="Laís Gentil XV" />
 
           <div className="date-mark" aria-label="23 de janeiro de 2027">
             <span className="date-mark__day">23</span>
@@ -80,16 +97,4 @@ function App() {
   )
 }
 
-const root = createRoot(document.getElementById('root'))
-root.render(<App />)
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add('is-visible')
-    })
-  },
-  { threshold: 0.18 }
-)
-
-document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el))
+createRoot(document.getElementById('root')).render(<App />)
