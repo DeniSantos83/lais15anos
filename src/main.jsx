@@ -5,6 +5,7 @@ import './style.css'
 
 function App() {
   const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`
+  const artworkStyle = { '--hero-image': `url("${asset('hero.webp')}")` }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,7 +23,7 @@ function App() {
   }, [])
 
   return (
-    <main>
+    <main style={artworkStyle}>
       <section className="hero">
         <div className="hero__veil" />
         <div className="hero__glow hero__glow--one" />
