@@ -18,28 +18,11 @@ function App() {
   return (
     <main>
       <section
-        className="hero"
+        className="hero hero--art-only"
         style={{ '--hero-art': `url("${asset('FundoComMonograma (2) (1).png')}")` }}
+        aria-label="Save the date — Laís Gentil XV"
       >
-        <div className="hero__shade" />
-        <div className="hero__content reveal">
-          <span className="eyebrow">SAVE THE DATE</span>
-          <img className="brand" src={asset('LogotipoSemEfeito.png')} alt="Laís Gentil XV" />
-
-          <div className="date-mark" aria-label="23 de janeiro de 2027">
-            <span className="date-mark__day">23</span>
-            <span className="date-mark__divider" />
-            <div>
-              <span className="date-mark__month">JANEIRO</span>
-              <span className="date-mark__year">2027</span>
-            </div>
-          </div>
-
-          <p className="hero__note">Uma noite para guardar para sempre.</p>
-          <a className="scroll-cue" href="#detalhes" aria-label="Ver detalhes do evento">
-            <span>detalhes</span><span className="scroll-cue__line" />
-          </a>
-        </div>
+        <a className="hero__details-link" href="#detalhes" aria-label="Ver detalhes do evento">Ver detalhes</a>
       </section>
 
       <section
