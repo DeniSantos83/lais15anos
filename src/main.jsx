@@ -25,11 +25,6 @@ function App() {
         <div className="hero__center">
           <span className="hero__eyebrow">SAVE THE DATE</span>
           <img className="hero__logo" src={asset('LogotipoSemEfeito.png')} alt="Laís Gentil XV" />
-          <div className="hero__date" aria-label="23 de janeiro de 2027">
-            <strong>23</strong>
-            <span></span>
-            <div><b>JANEIRO</b><small>2027</small></div>
-          </div>
           <p>Uma noite para guardar para sempre.</p>
         </div>
         <a className="hero__details-link" href="#detalhes" aria-label="Ver detalhes do evento">Ver detalhes</a>
@@ -51,7 +46,6 @@ function App() {
             <article className="info-card info-card--featured"><img className="mini-monogram" src={asset('MonogramaSemEfeito.png')} alt="XV" /><span className="info-card__label">Local</span><strong>Espaço Maravilha Festas</strong></article>
             <article className="info-card"><Clock3 size={26} strokeWidth={1.35} /><span className="info-card__label">Horário</span><strong>21 horas</strong></article>
           </div>
-          <div className="closing reveal-on-scroll"><span className="closing__line" /><p>23 • 01 • 2027</p><span className="closing__line" /></div>
         </div>
       </section>
     </main>
