@@ -46,6 +46,12 @@ function App() {
             <article className="info-card info-card--featured"><img className="mini-monogram" src={asset('MonogramaSemEfeito.png')} alt="XV" /><span className="info-card__label">Local</span><strong>Espaço Maravilha Festas</strong></article>
             <article className="info-card"><Clock3 size={26} strokeWidth={1.35} /><span className="info-card__label">Horário</span><strong>21 horas</strong></article>
           </div>
+          <div className="more-info reveal-on-scroll" aria-label="Mais informações em breve">
+            <span className="more-info__line" />
+            <Sparkles size={16} strokeWidth={1.3} />
+            <span className="more-info__line" />
+            <p>Mais informações em breve.</p>
+          </div>
         </div>
       </section>
     </main>
