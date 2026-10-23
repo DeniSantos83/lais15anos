@@ -40,7 +40,7 @@ function App() {
         <div className="details__inner">
           <div className="details__intro reveal-on-scroll"><Sparkles size={18} strokeWidth={1.4} /><span>Laís Gentil celebra seus 15 anos</span><Sparkles size={18} strokeWidth={1.4} /></div>
           <h1 className="details__title reveal-on-scroll">Reserve essa data</h1>
-          <p className="details__copy reveal-on-scroll">Em breve, um novo capítulo começa. Você faz parte dessa história.</p>
+          <p className="details__copy reveal-on-scroll">Você faz parte dessa história.</p>
           <div className="info-grid reveal-on-scroll">
             <article className="info-card"><CalendarDays size={26} strokeWidth={1.35} /><span className="info-card__label">Data</span><strong>23 de janeiro de 2027</strong></article>
             <article className="info-card info-card--featured"><img className="mini-monogram" src={asset('MonogramaSemEfeito.png')} alt="XV" /><span className="info-card__label">Local</span><strong>Espaço Maravilha Festas</strong></article>
