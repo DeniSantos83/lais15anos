@@ -24,7 +24,7 @@ function App() {
       >
         <div className="hero__center">
           <span className="hero__eyebrow">SAVE THE DATE</span>
-          <img className="hero__logo" src={asset('LogotipoSemEfeito.png')} alt="Laís Gentil XV" />
+          <img className="hero__logo" src={asset('LogotipoComEfeito.png')} alt="Laís Gentil XV" />
           <p>Uma noite para guardar para sempre.</p>
         </div>
         <a className="hero__details-link" href="#detalhes" aria-label="Ver detalhes do evento">Ver detalhes</a>
