@@ -18,10 +18,20 @@ function App() {
   return (
     <main>
       <section
-        className="hero hero--art-only"
-        style={{ '--hero-art': `url("${asset('FundoComMonograma (2) (1).png')}")` }}
+        className="hero"
+        style={{ '--hero-art': `url("${asset('Fundos (3) (1).png')}")` }}
         aria-label="Save the date — Laís Gentil XV"
       >
+        <div className="hero__center">
+          <span className="hero__eyebrow">SAVE THE DATE</span>
+          <img className="hero__logo" src={asset('LogotipoSemEfeito.png')} alt="Laís Gentil XV" />
+          <div className="hero__date" aria-label="23 de janeiro de 2027">
+            <strong>23</strong>
+            <span></span>
+            <div><b>JANEIRO</b><small>2027</small></div>
+          </div>
+          <p>Uma noite para guardar para sempre.</p>
+        </div>
         <a className="hero__details-link" href="#detalhes" aria-label="Ver detalhes do evento">Ver detalhes</a>
       </section>
 
@@ -32,34 +42,15 @@ function App() {
       >
         <img className="floating-petal floating-petal--left" src={asset('PetálaFluida (1) (1).png')} alt="" aria-hidden="true" />
         <img className="floating-petal floating-petal--right" src={asset('PetálaFluida (1) (1).png')} alt="" aria-hidden="true" />
-
         <div className="details__inner">
-          <div className="details__intro reveal-on-scroll">
-            <Sparkles size={18} strokeWidth={1.4} />
-            <span>Laís Gentil celebra seus 15 anos</span>
-            <Sparkles size={18} strokeWidth={1.4} />
-          </div>
+          <div className="details__intro reveal-on-scroll"><Sparkles size={18} strokeWidth={1.4} /><span>Laís Gentil celebra seus 15 anos</span><Sparkles size={18} strokeWidth={1.4} /></div>
           <h1 className="details__title reveal-on-scroll">Reserve essa data</h1>
           <p className="details__copy reveal-on-scroll">Em breve, um novo capítulo começa. Você faz parte dessa história.</p>
-
           <div className="info-grid reveal-on-scroll">
-            <article className="info-card">
-              <CalendarDays size={26} strokeWidth={1.35} />
-              <span className="info-card__label">Data</span>
-              <strong>23 de janeiro de 2027</strong>
-            </article>
-            <article className="info-card info-card--featured">
-              <img className="mini-monogram" src={asset('MonogramaSemEfeito.png')} alt="XV" />
-              <span className="info-card__label">Local</span>
-              <strong>Espaço Maravilha Festas</strong>
-            </article>
-            <article className="info-card">
-              <Clock3 size={26} strokeWidth={1.35} />
-              <span className="info-card__label">Horário</span>
-              <strong>21 horas</strong>
-            </article>
+            <article className="info-card"><CalendarDays size={26} strokeWidth={1.35} /><span className="info-card__label">Data</span><strong>23 de janeiro de 2027</strong></article>
+            <article className="info-card info-card--featured"><img className="mini-monogram" src={asset('MonogramaSemEfeito.png')} alt="XV" /><span className="info-card__label">Local</span><strong>Espaço Maravilha Festas</strong></article>
+            <article className="info-card"><Clock3 size={26} strokeWidth={1.35} /><span className="info-card__label">Horário</span><strong>21 horas</strong></article>
           </div>
-
           <div className="closing reveal-on-scroll"><span className="closing__line" /><p>23 • 01 • 2027</p><span className="closing__line" /></div>
         </div>
       </section>
